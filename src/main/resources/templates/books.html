@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Catalogue - Digital Library</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+
+    <div class="books-page">
+
+        <div class="books-container">
+
+            <h1>Digital Library</h1>
+
+            <h2>Book Catalogue</h2>
+
+            <!-- Search Section -->
+            <div class="search-section">
+
+                <form action="/books/search" method="get">
+                    <input type="text"
+                           name="title"
+                           placeholder="Search by title">
+                    <button type="submit">Search Title</button>
+                </form>
+
+                <form action="/books/search" method="get">
+                    <input type="text"
+                           name="author"
+                           placeholder="Search by author">
+                    <button type="submit">Search Author</button>
+                </form>
+
+                <form action="/books/search" method="get">
+                    <input type="text"
+                           name="category"
+                           placeholder="Search by category">
+                    <button type="submit">Search Category</button>
+                </form>
+
+            </div>
+
+            <!-- Add Book -->
+            <div class="add-book-section">
+                <a href="/books/add">
+                    <button type="button">Add New Book</button>
+                </a>
+            </div>
+
+            <!-- Book Table -->
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>ISBN</th>
+                            <th>Category</th>
+                            <th>Total</th>
+                            <th>Available</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr th:each="book : ${books}">
+
+                            <td th:text="${book.id}"></td>
+
+                            <td th:text="${book.title}"></td>
+
+                            <td th:text="${book.author}"></td>
+
+                            <td th:text="${book.isbn}"></td>
+
+                            <td th:text="${book.category}"></td>
+
+                            <td th:text="${book.quantity}"></td>
+
+                            <td th:text="${book.availableQuantity}"></td>
+
+                            <td>
+
+                                <!-- Admin Actions -->
+                                <div class="admin-actions">
+
+                                    <a th:href="@{/books/edit/{id}(id=${book.id})}">
+                                        Edit
+                                    </a>
+
+                                    <span>|</span>
+
+                                    <a th:href="@{/books/delete/{id}(id=${book.id})}"
+                                       onclick="return confirm('Are you sure you want to delete this book?');">
+                                        Delete
+                                    </a>
+
+                                </div>
+
+                                <br>
+
+                                <!-- Issue Book -->
+                                <form th:action="@{/books/issue}"
+                                      method="post">
+
+                                    <input type="hidden"
+                                           name="bookId"
+                                           th:value="${book.id}">
+
+                                    <button type="submit"
+                                            class="issue-button"
+                                            th:if="${book.availableQuantity > 0}">
+                                        Issue Book
+                                    </button>
+
+                                </form>
+
+                                <!-- Not Available + Reservation -->
+                                <div th:if="${book.availableQuantity <= 0}"
+                                     class="not-available">
+
+                                    <span>Not Available</span>
+
+                                    <form th:action="@{/books/reserve}"
+                                          method="post">
+
+                                        <input type="hidden"
+                                               name="bookId"
+                                               th:value="${book.id}">
+
+                                        <button type="submit"
+                                                class="reserve-button">
+                                            Reserve Book
+                                        </button>
+
+                                    </form>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                        <!-- Empty Book List -->
+                        <tr th:if="${#lists.isEmpty(books)}">
+
+                            <td colspan="8" class="empty-message">
+                                No books found.
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <!-- Navigation -->
+            <div class="book-navigation">
+
+                <a href="/my-books">
+                    My Issued Books / History
+                </a>
+
+                <a href="/reservations">
+                    My Reservations
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

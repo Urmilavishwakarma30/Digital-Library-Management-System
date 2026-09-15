@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Books - Digital Library</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+
+    <div class="my-books-page">
+
+        <div class="my-books-container">
+
+            <h1>Digital Library</h1>
+
+            <h2>My Issued Books / History</h2>
+
+            <div class="table-wrapper">
+
+                <table class="my-books-table">
+
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Book Title</th>
+                            <th>Author</th>
+                            <th>Issue Date</th>
+                            <th>Due Date</th>
+                            <th>Return Date</th>
+                            <th>Status</th>
+                            <th>Fine</th>
+                            <th>Fine Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr th:each="record : ${records}">
+
+                            <td th:text="${record.id}"></td>
+
+                            <td th:text="${record.book.title}"></td>
+
+                            <td th:text="${record.book.author}"></td>
+
+                            <td th:text="${record.issueDate}"></td>
+
+                            <td th:text="${record.dueDate}"></td>
+
+                            <td th:text="${record.returnDate != null ? record.returnDate : 'Not Returned'}"></td>
+
+                            <td>
+                                <span th:text="${record.status}"
+                                      class="status-text">
+                                </span>
+                            </td>
+
+                            <td>
+                                ₹<span th:text="${record.fineAmount}"></span>
+                            </td>
+
+                            <td>
+
+                                <span th:if="${record.fineAmount == 0}"
+                                      class="no-fine">
+                                    No Fine
+                                </span>
+
+                                <span th:if="${record.fineAmount > 0 and record.finePaid}"
+                                      class="paid">
+                                    Paid
+                                </span>
+
+                                <span th:if="${record.fineAmount > 0 and !record.finePaid}"
+                                      class="unpaid">
+                                    Unpaid
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <!-- Return Book -->
+
+                                <form th:if="${record.status == 'ISSUED'}"
+                                      th:action="@{/books/return}"
+                                      method="post">
+
+                                    <input type="hidden"
+                                           name="borrowId"
+                                           th:value="${record.id}">
+
+                                    <button type="submit"
+                                            class="return-button">
+                                        Return Book
+                                    </button>
+
+                                </form>
+
+                                <!-- Already Returned -->
+
+                                <span th:if="${record.status == 'RETURNED'}"
+                                      class="returned-text">
+                                    Returned
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+                        <!-- Empty State -->
+
+                        <tr th:if="${#lists.isEmpty(records)}">
+
+                            <td colspan="10"
+                                class="empty-message">
+
+                                You have no issued books or history.
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <div class="back-link">
+
+                <a href="/books">
+                    ← Back to Book Catalogue
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>User Queries - Admin</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+
+    <div class="admin-queries-page">
+
+        <div class="admin-queries-container">
+
+            <h1>Digital Library</h1>
+            <h2>User Queries</h2>
+
+            <div class="table-wrapper">
+
+                <table class="queries-table">
+
+                    <thead>
+                        <tr>
+                            <th>Query ID</th>
+                            <th>User</th>
+                            <th>Email</th>
+                            <th>Subject</th>
+                            <th>Message</th>
+                            <th>Query Date</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr th:each="query : ${queries}">
+
+                            <td th:text="${query.id}"></td>
+
+                            <td th:text="${query.user.name}"></td>
+
+                            <td th:text="${query.user.email}"></td>
+
+                            <td th:text="${query.subject}"></td>
+
+                            <td class="query-message"
+                                th:text="${query.message}">
+                            </td>
+
+                            <td th:text="${query.queryDate}"></td>
+
+                        </tr>
+
+                        <tr th:if="${#lists.isEmpty(queries)}">
+
+                            <td colspan="6" class="empty-message">
+                                No user queries found.
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <div class="admin-queries-back">
+
+                <a href="/admin">
+                    ← Back to Admin Dashboard
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

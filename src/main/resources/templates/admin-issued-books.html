@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Issued Books - Admin</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+
+    <div class="admin-issued-page">
+
+        <div class="admin-issued-container">
+
+            <h1>Digital Library</h1>
+            <h2>All Issued Books</h2>
+
+            <div class="table-wrapper">
+
+                <table class="issued-books-table">
+
+                    <thead>
+                        <tr>
+                            <th>Record ID</th>
+                            <th>User</th>
+                            <th>Email</th>
+                            <th>Book</th>
+                            <th>Author</th>
+                            <th>Issue Date</th>
+                            <th>Due Date</th>
+                            <th>Status</th>
+                            <th>Fine</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr th:each="record : ${borrowRecords}">
+
+                            <td th:text="${record.id}"></td>
+
+                            <td th:text="${record.user.name}"></td>
+
+                            <td th:text="${record.user.email}"></td>
+
+                            <td th:text="${record.book.title}"></td>
+
+                            <td th:text="${record.book.author}"></td>
+
+                            <td th:text="${record.issueDate}"></td>
+
+                            <td th:text="${record.dueDate}"></td>
+
+                            <td>
+                                <span class="issued-status"
+                                      th:text="${record.status}">
+                                </span>
+                            </td>
+
+                            <td>
+                                ₹<span th:text="${record.fineAmount}"></span>
+                            </td>
+
+                        </tr>
+
+                        <tr th:if="${#lists.isEmpty(borrowRecords)}">
+
+                            <td colspan="9" class="empty-message">
+                                No books are currently issued.
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <div class="admin-issued-back">
+
+                <a href="/admin">
+                    ← Back to Admin Dashboard
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

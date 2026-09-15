@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard - Digital Library</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+
+    <div class="admin-page">
+
+        <div class="admin-container">
+
+            <h1>Digital Library</h1>
+            <h2>Admin Dashboard</h2>
+
+            <p class="welcome-message">Welcome, Admin!</p>
+
+            <hr>
+
+            <h3>Library Management</h3>
+
+            <div class="admin-menu">
+
+                <a href="/books" class="admin-menu-button">
+                    Manage Books
+                </a>
+
+                <a href="/admin/issued-books" class="admin-menu-button">
+                    View Issued Books
+                </a>
+
+                <a href="/admin/members" class="admin-menu-button">
+                    Manage Members
+                </a>
+
+                <a href="/admin/fines" class="admin-menu-button">
+                    Manage Fines
+                </a>
+
+                <a href="/admin/queries" class="admin-menu-button">
+                    View User Queries
+                </a>
+
+            </div>
+
+            <hr>
+
+            <form action="/logout" method="post">
+                <button type="submit" class="admin-logout-button">
+                    Logout
+                </button>
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

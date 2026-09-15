@@ -1,0 +1,1630 @@
+/* Login Page */
+/* ============================= */
+/* Login Page */
+/* ============================= */
+
+.login-page {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background-color: #f4f6f8;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    width: 380px;
+    padding: 35px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.login-container h1 {
+    margin: 0 0 8px;
+    color: #263238;
+}
+
+.login-container h2 {
+    margin: 0 0 25px;
+    color: #455a64;
+}
+
+.login-container form {
+    text-align: left;
+}
+
+.login-container label {
+    display: block;
+    margin-bottom: 6px;
+    color: #263238;
+    font-weight: bold;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 11px 12px;
+    margin-bottom: 18px;
+    border: 1px solid #b0bec5;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.login-container input:focus {
+    border-color: #546e7a;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 11px;
+    background-color: #455a64;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.login-container button:hover {
+    background-color: #37474f;
+}
+
+.register-text {
+    margin-top: 20px;
+    color: #455a64;
+}
+
+.register-text a {
+    color: #263238;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-text a:hover {
+    text-decoration: underline;
+}
+
+.success-message {
+    margin-bottom: 20px;
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+.error-message {
+    margin-bottom: 20px;
+    color: #c62828;
+    font-weight: bold;
+}
+
+@media (max-width: 500px) {
+
+    .login-page {
+        padding: 20px 10px;
+    }
+
+    .login-container {
+        width: 100%;
+        padding: 25px 20px;
+    }
+}
+
+/* ============================= */
+/* Registration Page */
+/* ============================= */
+
+.register-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f6f8;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.register-container {
+    width: 380px;
+    padding: 35px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.register-container h1 {
+    margin: 0 0 10px;
+    color: #263238;
+}
+
+.register-container h2 {
+    margin: 0 0 25px;
+    color: #455a64;
+}
+
+.register-container form {
+    text-align: left;
+}
+
+.register-container label {
+    display: block;
+    margin-bottom: 6px;
+    color: #263238;
+    font-weight: bold;
+}
+
+.register-container input {
+    width: 100%;
+    padding: 11px 12px;
+    margin-bottom: 18px;
+    border: 1px solid #b0bec5;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.register-container input:focus {
+    border-color: #546e7a;
+}
+
+.register-container button {
+    width: 100%;
+    padding: 11px;
+    background-color: #455a64;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.register-container button:hover {
+    background-color: #37474f;
+}
+
+.login-text {
+    margin-top: 20px;
+    color: #455a64;
+}
+
+.login-text a {
+    color: #263238;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login-text a:hover {
+    text-decoration: underline;
+}
+
+/* Books Catalogue Page */
+
+
+.books-page {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background-color: #f4f6f8;
+    box-sizing: border-box;
+}
+
+.books-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 35px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+/* Headings */
+
+.books-container h1 {
+    text-align: center;
+    color: #263238;
+    margin: 0 0 8px;
+}
+
+.books-container h2 {
+    text-align: center;
+    color: #455a64;
+    margin: 0 0 30px;
+}
+
+
+/* ============================= */
+/* Search Section */
+
+
+.search-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.search-section form {
+    display: flex;
+    gap: 6px;
+}
+
+.search-section input {
+    width: 180px;
+    padding: 10px 12px;
+    border: 1px solid #b0bec5;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.search-section input:focus {
+    border-color: #546e7a;
+}
+
+.search-section button {
+    padding: 10px 13px;
+    background-color: #455a64;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.search-section button:hover {
+    background-color: #37474f;
+}
+
+
+/* ============================= */
+/* Add New Book */
+
+
+.add-book-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.add-book-section button {
+    padding: 11px 24px;
+    background-color: #455a64;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.add-book-section button:hover {
+    background-color: #37474f;
+}
+
+
+/* ============================= */
+/* Book Table */
+/* ============================= */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.books-container table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    color: #263238;
+}
+
+.books-container th {
+    background-color: #455a64;
+    color: white;
+    padding: 14px 10px;
+    border: 1px solid #607d8b;
+    font-size: 14px;
+}
+
+.books-container td {
+    padding: 13px 10px;
+    border: 1px solid #cfd8dc;
+    background-color: #ffffff;
+    font-size: 14px;
+}
+
+.books-container tbody tr:hover td {
+    background-color: #f5f7f8;
+}
+
+
+/* ============================= */
+/* Edit / Delete */
+/* ============================= */
+
+.admin-actions {
+    margin-bottom: 10px;
+}
+
+.admin-actions a {
+    color: #455a64;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.admin-actions a:hover {
+    color: #263238;
+    text-decoration: underline;
+}
+
+.admin-actions span {
+    color: #90a4ae;
+    margin: 0 4px;
+}
+
+
+/* ============================= */
+/* Issue Book */
+/* ============================= */
+
+.issue-button {
+    padding: 8px 14px;
+    background-color: #546e7a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.issue-button:hover {
+    background-color: #455a64;
+}
+
+
+/* ============================= */
+/* Not Available */
+/* ============================= */
+
+.not-available {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.not-available span {
+    display: block;
+    color: #c62828;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.reserve-button {
+    padding: 8px 14px;
+    background-color: #607d8b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.reserve-button:hover {
+    background-color: #455a64;
+}
+
+
+/* ============================= */
+/* Empty Message */
+/* ============================= */
+
+.empty-message {
+    padding: 25px !important;
+    color: #546e7a;
+    font-weight: bold;
+}
+
+
+/* ============================= */
+/* Bottom Navigation */
+/* ============================= */
+
+.book-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    margin-top: 30px;
+}
+
+.book-navigation a {
+    color: #455a64;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.book-navigation a:hover {
+    color: #263238;
+    text-decoration: underline;
+}
+
+
+/* ============================= */
+/* Responsive Design */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    .books-page {
+        padding: 20px 10px;
+    }
+
+    .books-container {
+        padding: 20px 15px;
+    }
+
+    .search-section {
+        flex-direction: column;
+    }
+
+    .search-section form {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .search-section input {
+        width: 220px;
+    }
+
+    .book-navigation {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* My Books Page */
+
+.my-books-page {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background-color: #f4f6f8;
+    box-sizing: border-box;
+}
+
+.my-books-container {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 35px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.my-books-container h1 {
+    text-align: center;
+    color: #263238;
+    margin-bottom: 8px;
+}
+
+.my-books-container h2 {
+    text-align: center;
+    color: #37474f;
+    margin-bottom: 30px;
+}
+
+/* Table */
+
+.my-books-container .table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.my-books-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    color: #263238;
+}
+
+.my-books-table th {
+    background-color: #455a64;
+    color: white;
+    padding: 14px 10px;
+    border: 1px solid #607d8b;
+}
+
+.my-books-table td {
+    padding: 13px 10px;
+    border: 1px solid #cfd8dc;
+    background-color: #ffffff;
+}
+
+.my-books-table tbody tr:hover td {
+    background-color: #f5f7f8;
+}
+
+/* Status */
+
+.status-text {
+    font-weight: bold;
+}
+
+.no-fine {
+    color: #546e7a;
+}
+
+.paid {
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+.unpaid {
+    color: #c62828;
+    font-weight: bold;
+}
+
+.returned-text {
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+/* Return Button */
+
+.return-button {
+    padding: 9px 14px;
+    background-color: #455a64;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.return-button:hover {
+    background-color: #37474f;
+}
+
+/* Empty Message */
+
+.my-books-table .empty-message {
+    padding: 30px;
+    color: #546e7a;
+}
+
+/* Back Link */
+
+.back-link {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.back-link a {
+    color: #37474f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-link a:hover {
+    color: #263238;
+}
+
+/* Reservations Page */
+
+.reservations-page {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background-color: #f4f6f8;
+    box-sizing: border-box;
+}
+
+.reservations-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 35px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.reservations-container h1 {
+    text-align: center;
+    color: #263238;
+    margin-bottom: 8px;
+}
+
+.reservations-container h2 {
+    text-align: center;
+    color: #37474f;
+    margin-bottom: 30px;
+}
+
+/* Table */
+
+.reservations-container .table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.reservations-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    color: #263238;
+}
+
+.reservations-table th {
+    background-color: #455a64;
+    color: white;
+    padding: 14px 10px;
+    border: 1px solid #607d8b;
+}
+
+.reservations-table td {
+    padding: 13px 10px;
+    border: 1px solid #cfd8dc;
+    background-color: white;
+}
+
+.reservations-table tbody tr:hover td {
+    background-color: #f5f7f8;
+}
+
+/* Reservation Status */
+
+.reservation-active {
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+.reservation-cancelled {
+    color: #c62828;
+    font-weight: bold;
+}
+
+/* Cancel Button */
+
+.cancel-button {
+    padding: 9px 14px;
+    background-color: #455a64;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.cancel-button:hover {
+    background-color: #37474f;
+}
+
+.cancelled-text {
+    color: #c62828;
+    font-weight: bold;
+}
+
+/* Empty Message */
+
+.reservations-table .empty-message {
+    padding: 30px;
+    color: #546e7a;
+}
+
+/* Back Link */
+
+.reservation-back-link {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.reservation-back-link a {
+    color: #37474f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.reservation-back-link a:hover {
+    color: #263238;
+}
+
+/* ============================= */
+/* Admin Dashboard */
+/* ============================= */
+
+.admin-page {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background-color: #f4f6f8;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-container {
+    width: 650px;
+    max-width: 100%;
+    padding: 40px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.admin-container h1 {
+    margin: 0 0 8px;
+    color: #263238;
+}
+
+.admin-container h2 {
+    margin: 0 0 15px;
+    color: #455a64;
+}
+
+.welcome-message {
+    color: #546e7a;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.admin-container hr {
+    border: none;
+    border-top: 1px solid #cfd8dc;
+    margin: 25px 0;
+}
+
+.admin-container h3 {
+    color: #37474f;
+    margin-bottom: 20px;
+}
+
+.admin-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.admin-menu-button {
+    display: block;
+    padding: 13px 20px;
+    background-color: #455a64;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.admin-menu-button:hover {
+    background-color: #37474f;
+}
+
+.admin-logout-button {
+    width: 180px;
+    padding: 11px;
+    background-color: #455a64;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.admin-logout-button:hover {
+    background-color: #37474f;
+}
+
+@media (max-width: 600px) {
+
+    .admin-page {
+        padding: 20px 10px;
+    }
+
+    .admin-container {
+        padding: 25px 20px;
+    }
+
+    .admin-menu-button {
+        padding: 12px;
+    }
+}
+
+/* ============================= */
+/* Admin Issued Books Page */
+/* ============================= */
+
+.admin-issued-page {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background-color: #f4f6f8;
+    box-sizing: border-box;
+}
+
+.admin-issued-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 35px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.admin-issued-container h1 {
+    text-align: center;
+    color: #263238;
+    margin: 0 0 8px;
+}
+
+.admin-issued-container h2 {
+    text-align: center;
+    color: #455a64;
+    margin: 0 0 30px;
+}
+
+.admin-issued-container .table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.issued-books-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    color: #263238;
+    min-width: 950px;
+}
+
+.issued-books-table th {
+    background-color: #455a64;
+    color: white;
+    padding: 14px 10px;
+    border: 1px solid #607d8b;
+    font-size: 14px;
+}
+
+.issued-books-table td {
+    padding: 13px 10px;
+    border: 1px solid #cfd8dc;
+    background-color: white;
+    font-size: 14px;
+}
+
+.issued-books-table tbody tr:hover td {
+    background-color: #f5f7f8;
+}
+
+.issued-status {
+    font-weight: bold;
+    color: #455a64;
+}
+
+.issued-books-table .empty-message {
+    padding: 30px;
+    color: #546e7a;
+    font-weight: bold;
+}
+
+.admin-issued-back {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.admin-issued-back a {
+    color: #455a64;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.admin-issued-back a:hover {
+    color: #263238;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+
+    .admin-issued-page {
+        padding: 20px 10px;
+    }
+
+    .admin-issued-container {
+        padding: 20px 15px;
+    }
+}
+
+/* ============================= */
+/* Admin Members Page */
+/* ============================= */
+
+.admin-members-page {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background-color: #f4f6f8;
+    box-sizing: border-box;
+}
+
+.admin-members-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 35px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.admin-members-container h1 {
+    text-align: center;
+    color: #263238;
+    margin: 0 0 8px;
+}
+
+.admin-members-container h2 {
+    text-align: center;
+    color: #455a64;
+    margin: 0 0 30px;
+}
+
+.admin-members-container .table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.members-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    color: #263238;
+}
+
+.members-table th {
+    background-color: #455a64;
+    color: white;
+    padding: 14px 10px;
+    border: 1px solid #607d8b;
+    font-size: 14px;
+}
+
+.members-table td {
+    padding: 13px 10px;
+    border: 1px solid #cfd8dc;
+    background-color: white;
+    font-size: 14px;
+}
+
+.members-table tbody tr:hover td {
+    background-color: #f5f7f8;
+}
+
+.member-role {
+    font-weight: bold;
+    color: #455a64;
+}
+
+.member-delete-button {
+    padding: 8px 15px;
+    background-color: #455a64;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.member-delete-button:hover {
+    background-color: #37474f;
+}
+
+.admin-label {
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+.members-table .empty-message {
+    padding: 30px;
+    color: #546e7a;
+    font-weight: bold;
+}
+
+.admin-members-back {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.admin-members-back a {
+    color: #455a64;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.admin-members-back a:hover {
+    color: #263238;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+
+    .admin-members-page {
+        padding: 20px 10px;
+    }
+
+    .admin-members-container {
+        padding: 20px 15px;
+    }
+}
+
+
+/* ============================= */
+/* Admin Fine Management Page */
+/* ============================= */
+
+.admin-fines-page {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background-color: #f4f6f8;
+    box-sizing: border-box;
+}
+
+.admin-fines-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 35px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.admin-fines-container h1 {
+    text-align: center;
+    color: #263238;
+    margin: 0 0 8px;
+}
+
+.admin-fines-container h2 {
+    text-align: center;
+    color: #455a64;
+    margin: 0 0 30px;
+}
+
+.admin-fines-container .table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.fines-table {
+    width: 100%;
+    min-width: 850px;
+    border-collapse: collapse;
+    text-align: center;
+    color: #263238;
+}
+
+.fines-table th {
+    background-color: #455a64;
+    color: white;
+    padding: 14px 10px;
+    border: 1px solid #607d8b;
+    font-size: 14px;
+}
+
+.fines-table td {
+    padding: 13px 10px;
+    border: 1px solid #cfd8dc;
+    background-color: white;
+    font-size: 14px;
+}
+
+.fines-table tbody tr:hover td {
+    background-color: #f5f7f8;
+}
+
+.fine-paid {
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+.fine-unpaid {
+    color: #c62828;
+    font-weight: bold;
+}
+
+.fine-pay-button {
+    padding: 8px 14px;
+    background-color: #455a64;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.fine-pay-button:hover {
+    background-color: #37474f;
+}
+
+.already-paid {
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+.fines-table .empty-message {
+    padding: 30px;
+    color: #546e7a;
+    font-weight: bold;
+}
+
+.admin-fines-back {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.admin-fines-back a {
+    color: #455a64;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.admin-fines-back a:hover {
+    color: #263238;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+
+    .admin-fines-page {
+        padding: 20px 10px;
+    }
+
+    .admin-fines-container {
+        padding: 20px 15px;
+    }
+}
+
+
+/* ============================= */
+/* Admin User Queries Page */
+/* ============================= */
+
+.admin-queries-page {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background-color: #f4f6f8;
+    box-sizing: border-box;
+}
+
+.admin-queries-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 35px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.admin-queries-container h1 {
+    text-align: center;
+    color: #263238;
+    margin: 0 0 8px;
+}
+
+.admin-queries-container h2 {
+    text-align: center;
+    color: #455a64;
+    margin: 0 0 30px;
+}
+
+.admin-queries-container .table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.queries-table {
+    width: 100%;
+    min-width: 1000px;
+    border-collapse: collapse;
+    text-align: center;
+    color: #263238;
+}
+
+.queries-table th {
+    background-color: #455a64;
+    color: white;
+    padding: 14px 10px;
+    border: 1px solid #607d8b;
+    font-size: 14px;
+}
+
+.queries-table td {
+    padding: 13px 10px;
+    border: 1px solid #cfd8dc;
+    background-color: white;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.queries-table tbody tr:hover td {
+    background-color: #f5f7f8;
+}
+
+.query-message {
+    max-width: 350px;
+    min-width: 250px;
+    text-align: left;
+    line-height: 1.5;
+    word-break: break-word;
+}
+
+.queries-table .empty-message {
+    padding: 30px;
+    color: #546e7a;
+    font-weight: bold;
+    text-align: center;
+}
+
+.admin-queries-back {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.admin-queries-back a {
+    color: #455a64;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.admin-queries-back a:hover {
+    color: #263238;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+
+    .admin-queries-page {
+        padding: 20px 10px;
+    }
+
+    .admin-queries-container {
+        padding: 20px 15px;
+    }
+}
+
+
+/* ============================= */
+/* Contact / Query Page */
+/* ============================= */
+
+.contact-page {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background-color: #f4f6f8;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-container {
+    width: 500px;
+    max-width: 100%;
+    padding: 35px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+}
+
+.contact-container h1 {
+    text-align: center;
+    color: #263238;
+    margin: 0 0 8px;
+}
+
+.contact-container h2 {
+    text-align: center;
+    color: #455a64;
+    margin: 0 0 25px;
+}
+
+.contact-container form {
+    width: 100%;
+}
+
+.contact-container label {
+    display: block;
+    margin-bottom: 6px;
+    color: #263238;
+    font-weight: bold;
+}
+
+.contact-container input,
+.contact-container textarea {
+    width: 100%;
+    padding: 11px 12px;
+    margin-bottom: 18px;
+    border: 1px solid #b0bec5;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.contact-container input:focus,
+.contact-container textarea:focus {
+    border-color: #546e7a;
+}
+
+.contact-container textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.contact-container button {
+    width: 100%;
+    padding: 11px;
+    background-color: #455a64;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.contact-container button:hover {
+    background-color: #37474f;
+}
+
+.query-success {
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #2e7d32;
+    background-color: #e8f5e9;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.contact-back-link {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.contact-back-link a {
+    color: #455a64;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-back-link a:hover {
+    color: #263238;
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+
+    .contact-page {
+        padding: 20px 10px;
+    }
+
+    .contact-container {
+        padding: 25px 20px;
+    }
+}
+
+
+/* ============================= */
+/* Add Book Page */
+/* ============================= */
+
+.add-book-page {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background-color: #f4f6f8;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-book-container {
+    width: 500px;
+    max-width: 100%;
+    padding: 35px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+}
+
+.add-book-container h1 {
+    text-align: center;
+    color: #263238;
+    margin: 0 0 8px;
+}
+
+.add-book-container h2 {
+    text-align: center;
+    color: #455a64;
+    margin: 0 0 25px;
+}
+
+.add-book-container form {
+    width: 100%;
+}
+
+.add-book-container label {
+    display: block;
+    margin-bottom: 6px;
+    color: #263238;
+    font-weight: bold;
+}
+
+.add-book-container input {
+    width: 100%;
+    padding: 11px 12px;
+    margin-bottom: 18px;
+    border: 1px solid #b0bec5;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.add-book-container input:focus {
+    border-color: #546e7a;
+}
+
+.add-book-container button {
+    width: 100%;
+    padding: 11px;
+    background-color: #455a64;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.add-book-container button:hover {
+    background-color: #37474f;
+}
+
+.add-book-back {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.add-book-back a {
+    color: #455a64;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.add-book-back a:hover {
+    color: #263238;
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+
+    .add-book-page {
+        padding: 20px 10px;
+    }
+
+    .add-book-container {
+        padding: 25px 20px;
+    }
+}
+
+
+/* ============================= */
+/* Edit Book Page */
+/* ============================= */
+
+.edit-book-page {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background-color: #f4f6f8;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-book-container {
+    width: 500px;
+    max-width: 100%;
+    padding: 35px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+}
+
+.edit-book-container h1 {
+    text-align: center;
+    color: #263238;
+    margin: 0 0 8px;
+}
+
+.edit-book-container h2 {
+    text-align: center;
+    color: #455a64;
+    margin: 0 0 25px;
+}
+
+.edit-book-container form {
+    width: 100%;
+}
+
+.edit-book-container label {
+    display: block;
+    margin-bottom: 6px;
+    color: #263238;
+    font-weight: bold;
+}
+
+.edit-book-container input {
+    width: 100%;
+    padding: 11px 12px;
+    margin-bottom: 18px;
+    border: 1px solid #b0bec5;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.edit-book-container input:focus {
+    border-color: #546e7a;
+}
+
+.edit-book-container button {
+    width: 100%;
+    padding: 11px;
+    background-color: #455a64;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.edit-book-container button:hover {
+    background-color: #37474f;
+}
+
+.edit-book-back {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.edit-book-back a {
+    color: #455a64;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.edit-book-back a:hover {
+    color: #263238;
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .edit-book-page {
+        padding: 20px 10px;
+    }
+
+    .edit-book-container {
+        padding: 25px 20px;
+    }
+}

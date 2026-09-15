@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registration - Digital Library</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+
+    <div class="register-page">
+
+        <div class="register-container">
+
+            <h1>Digital Library</h1>
+            <h2>User Registration</h2>
+
+            <form action="/register" method="post">
+
+                <label>Name:</label>
+                <input type="text"
+                       name="name"
+                       placeholder="Enter your name"
+                       required>
+
+                <label>Email:</label>
+                <input type="email"
+                       name="email"
+                       placeholder="Enter your email"
+                       required>
+
+                <label>Password:</label>
+                <input type="password"
+                       name="password"
+                       placeholder="Enter password"
+                       required>
+
+                <button type="submit">Register</button>
+
+            </form>
+
+            <p class="login-text">
+                Already have an account?
+                <a href="/login">Login here</a>
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

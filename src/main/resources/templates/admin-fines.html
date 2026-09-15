@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fine Management - Admin</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+
+    <div class="admin-fines-page">
+
+        <div class="admin-fines-container">
+
+            <h1>Digital Library</h1>
+            <h2>Fine Management</h2>
+
+            <div class="table-wrapper">
+
+                <table class="fines-table">
+
+                    <thead>
+                        <tr>
+                            <th>Record ID</th>
+                            <th>User</th>
+                            <th>Email</th>
+                            <th>Book</th>
+                            <th>Fine Amount</th>
+                            <th>Fine Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr th:each="record : ${fineRecords}">
+
+                            <td th:text="${record.id}"></td>
+
+                            <td th:text="${record.user.name}"></td>
+
+                            <td th:text="${record.user.email}"></td>
+
+                            <td th:text="${record.book.title}"></td>
+
+                            <td>
+                                ₹<span th:text="${record.fineAmount}"></span>
+                            </td>
+
+                            <td>
+
+                                <span th:if="${record.finePaid}"
+                                      class="fine-paid">
+                                    PAID
+                                </span>
+
+                                <span th:if="${!record.finePaid}"
+                                      class="fine-unpaid">
+                                    UNPAID
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <form th:if="${!record.finePaid}"
+                                      th:action="@{/admin/fines/pay}"
+                                      method="post">
+
+                                    <input type="hidden"
+                                           name="id"
+                                           th:value="${record.id}">
+
+                                    <button type="submit"
+                                            class="fine-pay-button">
+                                        Mark Fine Paid
+                                    </button>
+
+                                </form>
+
+                                <span th:if="${record.finePaid}"
+                                      class="already-paid">
+                                    Already Paid
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+                        <tr th:if="${#lists.isEmpty(fineRecords)}">
+
+                            <td colspan="7" class="empty-message">
+                                No fines found.
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <div class="admin-fines-back">
+
+                <a href="/admin">
+                    ← Back to Admin Dashboard
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

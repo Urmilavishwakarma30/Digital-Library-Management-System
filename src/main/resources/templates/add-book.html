@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Book - Digital Library</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+
+    <div class="add-book-page">
+
+        <div class="add-book-container">
+
+            <h1>Digital Library</h1>
+            <h2>Add New Book</h2>
+
+            <form th:action="@{/books/save}"
+                  th:object="${book}"
+                  method="post">
+
+                <label>Book Title:</label>
+
+                <input type="text"
+                       th:field="*{title}"
+                       placeholder="Enter book title"
+                       required>
+
+                <label>Author:</label>
+
+                <input type="text"
+                       th:field="*{author}"
+                       placeholder="Enter author name"
+                       required>
+
+                <label>ISBN:</label>
+
+                <input type="text"
+                       th:field="*{isbn}"
+                       placeholder="Enter ISBN"
+                       required>
+
+                <label>Category:</label>
+
+                <input type="text"
+                       th:field="*{category}"
+                       placeholder="Enter category"
+                       required>
+
+                <label>Total Quantity:</label>
+
+                <input type="number"
+                       th:field="*{quantity}"
+                       min="1"
+                       placeholder="Enter quantity"
+                       required>
+
+                <button type="submit">
+                    Save Book
+                </button>
+
+            </form>
+
+            <div class="add-book-back">
+                <a href="/books">
+                    ← Back to Book Catalogue
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

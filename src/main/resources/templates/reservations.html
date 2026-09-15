@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Reservations - Digital Library</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+
+    <div class="reservations-page">
+
+        <div class="reservations-container">
+
+            <h1>Digital Library</h1>
+
+            <h2>My Reservations</h2>
+
+            <div class="table-wrapper">
+
+                <table class="reservations-table">
+
+                    <thead>
+                        <tr>
+                            <th>Reservation ID</th>
+                            <th>Book Title</th>
+                            <th>Author</th>
+                            <th>Reservation Date</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr th:each="reservation : ${reservations}">
+
+                            <td th:text="${reservation.id}"></td>
+
+                            <td th:text="${reservation.book.title}"></td>
+
+                            <td th:text="${reservation.book.author}"></td>
+
+                            <td th:text="${reservation.reservationDate}"></td>
+
+                            <td>
+                                <span th:if="${reservation.status == 'ACTIVE'}"
+                                      class="reservation-active">
+                                    ACTIVE
+                                </span>
+
+                                <span th:if="${reservation.status == 'CANCELLED'}"
+                                      class="reservation-cancelled">
+                                    CANCELLED
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <!-- Cancel Reservation -->
+
+                                <form th:if="${reservation.status == 'ACTIVE'}"
+                                      th:action="@{/reservations/cancel}"
+                                      method="post">
+
+                                    <input type="hidden"
+                                           name="id"
+                                           th:value="${reservation.id}">
+
+                                    <button type="submit"
+                                            class="cancel-button">
+                                        Cancel Reservation
+                                    </button>
+
+                                </form>
+
+                                <span th:if="${reservation.status == 'CANCELLED'}"
+                                      class="cancelled-text">
+                                    Cancelled
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+                        <!-- Empty State -->
+
+                        <tr th:if="${#lists.isEmpty(reservations)}">
+
+                            <td colspan="6"
+                                class="empty-message">
+
+                                You have no reservations.
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <div class="reservation-back-link">
+
+                <a href="/books">
+                    ← Back to Books
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

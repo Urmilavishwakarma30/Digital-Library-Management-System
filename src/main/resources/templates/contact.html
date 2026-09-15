@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact / Query - Digital Library</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+
+    <div class="contact-page">
+
+        <div class="contact-container">
+
+            <h1>Digital Library</h1>
+            <h2>Contact / Submit Query</h2>
+
+            <p th:if="${param.success}" class="query-success">
+                Your query has been submitted successfully!
+            </p>
+
+            <form action="/contact" method="post">
+
+                <label>Subject:</label>
+
+                <input type="text"
+                       name="subject"
+                       placeholder="Enter subject"
+                       required>
+
+                <label>Message:</label>
+
+                <textarea name="message"
+                          rows="6"
+                          placeholder="Enter your query"
+                          required></textarea>
+
+                <button type="submit">
+                    Submit Query
+                </button>
+
+            </form>
+
+            <div class="contact-back-link">
+                <a href="/books">
+                    ← Back to Books
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
